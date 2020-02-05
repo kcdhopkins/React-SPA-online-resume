@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Molle:400i|Source+Serif+Pro&display=swap");
+html, body{
+  height: 100%;
+}
 
 /* custom colors */
 .tigerlily {
@@ -7,8 +10,10 @@
 
 /* custom fonts */
 
-/*Jumbotron*/
-.jumbotron-bg-image {
-  background-image: url("./assets/img/jumbotron.jpg");
-  color: white;
+
+/* Main content */
+#root{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }

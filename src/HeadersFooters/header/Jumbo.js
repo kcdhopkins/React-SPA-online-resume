@@ -1,18 +1,28 @@
 import React from "react";
-import { Jumbotron, Button } from "react-bootstrap";
+import backgroundImage from '../../assets/img/jumbotron.jpg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Jumbo = () => {
+  const jumboStyle = {
+    marginBottom: 0,
+    backgroundImage: `url(${backgroundImage})`,
+    color: "white"
+  }
+  const buttonStyle = {
+    margin: "5px"
+  }
   return (
-    <Jumbotron className="d-flex flex-column justify-content-center align-items-center jumbotron-bg-image">
+    <div id="jumbotron" style = {jumboStyle} className="jumbotron d-flex flex-column justify-content-center align-items-center jumbotron-bg-image">
       <h1>Keyairius Hopkins</h1>
       <p>
-        Hey good looking what cha got cooking, must be cooking something good
-        for me.
+        Web developer with front and backend experience using html, css, vanilla/modern/bootstrap javascript on the frontend, php and mysql on the backend to provide the optimal user experience.
       </p>
-      <p>
-        <Button variant="primary">Click here</Button>
-      </p>
-    </Jumbotron>
+      <div>
+        <a style ={buttonStyle} className='btn btn-outline-light' href="https://github.com/kcdhopkins" role='button'><FontAwesomeIcon icon={faBars}/> Github</a>
+        <a style ={buttonStyle} className='btn btn-outline-light' href="https://www.linkedin.com/in/keyairius-hopkins-4b7b984a" role='button'><FontAwesomeIcon icon={faBars}/> LinkedIn</a>
+      </div>
+    </div>
   );
 };
 

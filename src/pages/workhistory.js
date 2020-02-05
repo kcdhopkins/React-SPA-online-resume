@@ -1,6 +1,6 @@
 import React from "react";
 
-const home = ()=>{
+const workhistory = ()=>{
 
     const homeStyle = {
         display: "flex",
@@ -10,8 +10,8 @@ const home = ()=>{
     }
 
     return (
-        <div style ={homeStyle}><h1>Home</h1></div>
+        <div style={homeStyle}><h1>Work History</h1></div>
     );
 }
 
-export default home;
+export default workhistory;

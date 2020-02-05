@@ -5,13 +5,19 @@ import Jumbo from "./Jumbo";
 
 const headers = () => {
   return (
-    <div>
-      <Nav />
+    <div id="headers">
       <Jumbo />
+      <Nav />
       <Link to="/">
         <button> Click Me </button>
       </Link>
       <Link to="/education">
+        <button> Click Me </button>
+      </Link>
+      <Link to="/workhistory">
+        <button> Click Me </button>
+      </Link>
+      <Link to="/clubandorganization">
         <button> Click Me </button>
       </Link>
     </div>

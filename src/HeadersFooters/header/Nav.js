@@ -1,22 +1,33 @@
 import React from "react";
-import { Navbar } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
+
   const navStyle = {
     fontFamily: "'Molle', cursive",
+    fontSize: "25px",
     color: "white"
   };
+
+  const onHover = e => {
+    e.target.style.color = "black";
+  }
+
+  const offHover = e => {
+    e.target.style.color = "white";
+  }
+
   return (
-    <>
-      <Navbar className="shadow tigerlily d-flex justify-content-between">
-        <Navbar.Brand>
+      <div id="nav" className=" navbar shadow tigerlily d-flex justify-content-between">
+        <div className ="navbar-brand">
           <span style={navStyle}>Keyairius Hopkins</span>
-        </Navbar.Brand>
-        <FontAwesomeIcon style={navStyle} icon={faBars} />
-      </Navbar>
-    </>
+        </div>
+        <div onMouseOver = {onHover} onMouseOut = {offHover}>
+          <FontAwesomeIcon style={navStyle} icon={faBars}/>
+        </div>
+        
+      </div>
   );
 };
 
