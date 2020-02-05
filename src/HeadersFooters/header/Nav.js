@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-
+import Menu from "./menu";
 const Nav = () => {
   const navStyle = {
     fontFamily: "'Molle', cursive",
@@ -9,26 +9,60 @@ const Nav = () => {
     color: "white"
   };
 
-  const onHover = e => {
-    e.target.style.color = "black";
+  const menuStyleHide = {
+    width: "100vw",
+    height: "100%",
+    backgroundColor: "red",
+    position: "absolute",
+    top: "0",
+    zIndex: "0",
+    transform: "translate3d(-100vw, 0, 0)"
   };
 
-  const offHover = e => {
-    e.target.style.color = "white";
+  const menuStyleShow = {
+    width: "100vw",
+    height: "100%",
+    backgroundColor: "red",
+    position: "absolute",
+    top: "0",
+    zIndex: "0",
+    transition: "width 2s height 2s, transform 2s"
+  };
+
+  const positionStyle = {
+    position: "static",
+    zIndex: "1"
+  };
+
+  const showMenu = () => {};
+
+  const [visible, setVisiblilty] = useState(false);
+
+  const menuClick = () => {
+    if (visible) {
+      setVisiblilty(false);
+    } else {
+      setVisiblilty(true);
+    }
   };
 
   return (
-    <div
-      id="nav"
-      className=" navbar shadow tigerlily d-flex justify-content-between"
-    >
-      <div className="navbar-brand">
-        <span style={navStyle}>Keyairius Hopkins</span>
+    <>
+      <div style={visible ? menuStyleShow : menuStyleHide}>
+        <Menu closeButton={menuClick} />
       </div>
-      <div onMouseOver={onHover} onMouseOut={offHover}>
-        <FontAwesomeIcon style={navStyle} icon={faBars} />
+      <div
+        style={positionStyle}
+        className="navbar shadow tigerlily d-flex justify-content-between"
+      >
+        <div className="navbar-brand">
+          <span style={navStyle}>Keyairius Hopkins</span>
+        </div>
+        <div id="hamburgerMenu" onClick={menuClick}>
+          <FontAwesomeIcon id="hamIcon" style={navStyle} icon={faBars} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
