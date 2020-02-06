@@ -19,7 +19,7 @@ body {
   height: 100%;
 }
 /*Nav menu styles*/
-#navMenuStyle{
+#navMenuStyle {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -29,24 +29,31 @@ body {
   top: 0;
   z-index: 1000;
   background-color: #e15d44;
-  transition: transform .3s cubic-bezier(0, .52, 0, 1);
+  transition: transform 0.6s ease-out;
   color: white;
 }
 
-.navMenuHide{
-  transform: translate3d(-100vw, 0, 0);
+.navMenuHide {
+  transform: translate(-100vw, 0);
 }
 
-.navMenuShow{
-  transform: translate3d(0vw, 0, 0);
+.navMenuShow {
+  transform: translate(0vw, 0);
   overflow: hidden;
 }
-
 
 #closeButton:hover {
   color: black;
 }
 
-#reactLink:hover{
+#reactLink:hover {
+  color: black;
+}
+
+li {
+  margin: 2px;
+}
+
+.closeButton:hover {
   color: black;
 }

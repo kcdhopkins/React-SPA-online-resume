@@ -1,5 +1,8 @@
 import React from "react";
 import backgroundImage from "../../assets/img/jumbotron.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Jumbo = () => {
   const jumboStyle = {
@@ -17,7 +20,7 @@ const Jumbo = () => {
       style={jumboStyle}
       className="jumbotron d-flex flex-column justify-content-center align-items-center jumbotron-bg-image"
     >
-      <h1>Keyairius Hopkins</h1>
+      <h1 className="text-center">Keyairius Hopkins</h1>
       <p className="text-center">
         Web developer with front and backend experience using html, css,
         vanilla/modern/bootstrap javascript on the frontend, php and mysql on
@@ -30,7 +33,7 @@ const Jumbo = () => {
           href="https://github.com/kcdhopkins"
           role="button"
         >
-          Github
+          <FontAwesomeIcon icon={faGithub} /> Github
         </a>
         <a
           style={buttonStyle}
@@ -38,7 +41,7 @@ const Jumbo = () => {
           href="https://www.linkedin.com/in/keyairius-hopkins-4b7b984a"
           role="button"
         >
-          LinkedIn
+          <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
         </a>
       </div>
     </div>

@@ -19,12 +19,12 @@ const Menu = props => {
   const textStyle = {
     color: "white",
     textDecoration: "none"
-  }
-  
-  const linkStyle = { 
+  };
+
+  const linkStyle = {
     textDecoration: "none",
     fontFamily: "'Merriweather', serif",
-    transition: "all .2s cubic-bezier(0, 1.26, .8, 1.28)"
+    transition: "transform ease"
   };
 
   const show = "navMenuShow";
@@ -33,34 +33,55 @@ const Menu = props => {
   const hover = e => {
     e.target.style.color = "black";
     e.target.style.textShadow = "1px 1px 5px grey";
-    //e.target.style.transform = "scale(1.2, 1.2)";
   };
 
   const unHover = e => {
     e.target.style.color = "white";
     e.target.style.textShadow = "none";
-    //e.target.style.transform = "scale(0, 0)";
   };
 
   return (
-      <div id= "navMenuStyle" className={ props.visiblilty ? show : hide}>
-        <div onClick={props.closeButton}>
-          <FontAwesomeIcon id ="closeButton" style = {iconStyle} icon={faTimes} />
-        </div>
-        <ul style={menuStyle}>
-          <Link to="/" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
-            <li onClick={props.closeButton}><span style ={textStyle}>HOME</span></li>
-          </Link>
-          <Link to="/education" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
-            <li onClick={props.closeButton}><span style ={textStyle}>EDUCATION</span></li>
-          </Link>
-          <Link to="/workhistory" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
-            <li onClick={props.closeButton}><span style ={textStyle}>WORK HISTORY</span></li>
-          </Link>
-          <Link to="/clubandorganization" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
-            <li onClick={props.closeButton}><span style ={textStyle}>CLUBS AND ORGANIZATION</span></li>
-          </Link>
-        </ul>
+    <div id="navMenuStyle" className={props.visiblilty ? show : hide}>
+      <div onClick={props.closeButton}>
+        <FontAwesomeIcon id="closeButton" style={iconStyle} icon={faTimes} />
+      </div>
+      <ul style={menuStyle}>
+        <Link to="/" style={linkStyle} onMouseOver={hover} onMouseOut={unHover}>
+          <li onClick={props.closeButton}>
+            <span style={textStyle}>HOME</span>
+          </li>
+        </Link>
+        <Link
+          to="/education"
+          style={linkStyle}
+          onMouseOver={hover}
+          onMouseOut={unHover}
+        >
+          <li onClick={props.closeButton}>
+            <span style={textStyle}>EDUCATION</span>
+          </li>
+        </Link>
+        <Link
+          to="/workhistory"
+          style={linkStyle}
+          onMouseOver={hover}
+          onMouseOut={unHover}
+        >
+          <li onClick={props.closeButton}>
+            <span style={textStyle}>WORK HISTORY</span>
+          </li>
+        </Link>
+        <Link
+          to="/clubandorganization"
+          style={linkStyle}
+          onMouseOver={hover}
+          onMouseOut={unHover}
+        >
+          <li onClick={props.closeButton}>
+            <span style={textStyle}>CLUBS AND ORGANIZATION</span>
+          </li>
+        </Link>
+      </ul>
     </div>
   );
 };

@@ -20,15 +20,25 @@ const Nav = () => {
     }
   };
 
+  const hover = e => {
+    e.target.style.color = "black";
+  };
+
+  const unHover = e => {
+    e.target.style.color = "white";
+  };
+
   return (
     <>
-      <Menu closeButton={menuClick} visiblilty={visible}/>
+      <Menu closeButton={menuClick} visiblilty={visible} />
       <div className="navbar shadow tigerlily d-flex justify-content-between mb-4">
         <div className="navbar-brand">
           <span style={navStyle}>Keyairius Hopkins</span>
         </div>
-        <div onClick={menuClick}>
-          <FontAwesomeIcon style={navStyle} icon={faBars} />
+        <div className="hovering" onClick={menuClick}>
+          <span onMouseOver={hover} onMouseOut={unHover}>
+            <FontAwesomeIcon id="closeButton" style={navStyle} icon={faBars} />
+          </span>
         </div>
       </div>
     </>
