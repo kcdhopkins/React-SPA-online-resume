@@ -6,7 +6,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 const Menu = props => {
   const menuStyle = {
     listStyle: "none",
-    fontSize: "3.5vw",
+    fontSize: "3.5vw"
   };
 
   const iconStyle = {
@@ -17,23 +17,43 @@ const Menu = props => {
     top: "25"
   };
 
+  const textStyle = {
+    color: "white",
+    textDecoration: "none"
+  }
+  
+  const linkStyle = { 
+    textDecoration: "none"
+  };
+
+  const show = "navMenuShow";
+  const hide = "navMenuHide";
+
+  const hover = e => {
+    e.target.style.color = "black";
+  };
+
+  const unHover = e => {
+    e.target.style.color = "white";
+  };
+
   return (
-      <div id= "navMenuStyle" className={ props.visiblilty ? "navMenuShow" : "navMenuHide"}>
+      <div id= "navMenuStyle" className={ props.visiblilty ? show : hide}>
         <div onClick={props.closeButton}>
           <FontAwesomeIcon id ="closeButton" style = {iconStyle} icon={faTimes} />
         </div>
         <ul style={menuStyle}>
-          <Link to="/">
-            <li onClick={props.closeButton}>HOME</li>
+          <Link to="/" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
+            <li onClick={props.closeButton}><span style ={textStyle}>HOME</span></li>
           </Link>
-          <Link to="/education">
-            <li onClick={props.closeButton}>EDUCATION</li>
+          <Link to="/education" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
+            <li onClick={props.closeButton}><span style ={textStyle}>EDUCATION</span></li>
           </Link>
-          <Link to="/workhistory">
-            <li onClick={props.closeButton}>WORK HISTORY</li>
+          <Link to="/workhistory" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
+            <li onClick={props.closeButton}><span style ={textStyle}>WORK HISTORY</span></li>
           </Link>
-          <Link to="/clubandorganization">
-            <li onClick={props.closeButton}>CLUBS AND ORGANIZATION</li>
+          <Link to="/clubandorganization" style={linkStyle} onMouseOver = {hover} onMouseOut = {unHover}>
+            <li onClick={props.closeButton}><span style ={textStyle}>CLUBS AND ORGANIZATION</span></li>
           </Link>
         </ul>
     </div>

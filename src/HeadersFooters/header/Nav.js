@@ -23,7 +23,7 @@ const Nav = () => {
   return (
     <>
       <Menu closeButton={menuClick} visiblilty={visible}/>
-      <div className="navbar shadow tigerlily d-flex justify-content-between">
+      <div className="navbar shadow tigerlily d-flex justify-content-between mb-4">
         <div className="navbar-brand">
           <span style={navStyle}>Keyairius Hopkins</span>
         </div>

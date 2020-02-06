@@ -45,3 +45,7 @@ body {
 #closeButton:hover {
   color: black;
 }
+
+#reactLink:hover{
+  color: black;
+}
