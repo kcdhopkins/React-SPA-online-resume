@@ -9,27 +9,25 @@ const Menu = props => {
     fontSize: "3.5vw"
   };
 
-  const containerStyle = {
-    display: "flex",
-    width: "100vw",
-    height: "100vh",
-    justifyContent: "center",
-    alignItems: "center"
-  };
-
   return (
-    <div style={containerStyle}>
-      <div onClick={props.closeButton}>
-        <FontAwesomeIcon icon={faBars} />
-      </div>
-      <ul style={menuStyle}>
-        <Link to="/">
-          <li>HOME</li>
-        </Link>
-        <Link to="/education">
-          <li>EDUCATION</li>
-        </Link>
-      </ul>
+      <div id= "navMenuStyle" className={ props.visiblilty ? "navMenuShow" : "navMenuHide"}>
+        <div onClick={props.closeButton}>
+          <FontAwesomeIcon icon={faBars} />
+        </div>
+        <ul style={menuStyle}>
+          <Link to="/">
+            <li onClick={props.closeButton}>HOME</li>
+          </Link>
+          <Link to="/education">
+            <li onClick={props.closeButton}>EDUCATION</li>
+          </Link>
+          <Link to="/workhistory">
+            <li onClick={props.closeButton}>WORK HISTORY</li>
+          </Link>
+          <Link to="/clubandorganization">
+            <li onClick={props.closeButton}>CLUBS AND ORGANIZATION</li>
+          </Link>
+        </ul>
     </div>
   );
 };

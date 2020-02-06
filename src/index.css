@@ -17,3 +17,26 @@ body {
   flex-direction: column;
   height: 100%;
 }
+/*Nav menu styles*/
+#navMenuStyle{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: red;
+  opacity: 0.5;
+  transition: transform .3s cubic-bezier(0, .52, 0, 1);
+}
+
+.navMenuHide{
+  transform: translate3d(-100vw, 0, 0);
+}
+
+.navMenuShow{
+  transform: translate3d(0vw, 0, 0);
+  overflow: hidden;
+}

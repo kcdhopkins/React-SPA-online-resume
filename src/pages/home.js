@@ -18,7 +18,7 @@ const home = () => {
 
   return (
     <div style={homeStyle}>
-      <img style={imgStyle} src={me} height="150" width="150" />
+      <img style={imgStyle} src={me} height="150" width="150" alt="photoOfMe"/>
       <p>
         Software/Applications/Web Developer with 5 years of experience using
         software development languages such as PHP on the back-end for storing
