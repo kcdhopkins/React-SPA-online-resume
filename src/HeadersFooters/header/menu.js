@@ -31,10 +31,12 @@ const Menu = props => {
 
   const hover = e => {
     e.target.style.color = "black";
+    e.target.style.textShadow = "1px 1px 5px grey";
   };
 
   const unHover = e => {
     e.target.style.color = "white";
+    e.target.style.textShadow = "none";
   };
 
   return (
