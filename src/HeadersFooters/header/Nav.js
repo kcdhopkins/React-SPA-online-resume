@@ -23,14 +23,12 @@ const Nav = () => {
   return (
     <>
       <Menu closeButton={menuClick} visiblilty={visible}/>
-      <div
-        className="navbar shadow tigerlily d-flex justify-content-between"
-      >
+      <div className="navbar shadow tigerlily d-flex justify-content-between">
         <div className="navbar-brand">
           <span style={navStyle}>Keyairius Hopkins</span>
         </div>
-        <div id="hamburgerMenu" onClick={menuClick}>
-          <FontAwesomeIcon id="hamIcon" style={navStyle} icon={faBars} />
+        <div onClick={menuClick}>
+          <FontAwesomeIcon style={navStyle} icon={faBars} />
         </div>
       </div>
     </>

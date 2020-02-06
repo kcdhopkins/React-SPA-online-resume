@@ -1,18 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = props => {
   const menuStyle = {
     listStyle: "none",
-    fontSize: "3.5vw"
+    fontSize: "3.5vw",
+  };
+
+  const iconStyle = {
+    fontFamily: "'Molle', cursive",
+    fontSize: "4vh",
+    position: "absolute",
+    right: "30",
+    top: "25"
   };
 
   return (
       <div id= "navMenuStyle" className={ props.visiblilty ? "navMenuShow" : "navMenuHide"}>
         <div onClick={props.closeButton}>
-          <FontAwesomeIcon icon={faBars} />
+          <FontAwesomeIcon id ="closeButton" style = {iconStyle} icon={faTimes} />
         </div>
         <ul style={menuStyle}>
           <Link to="/">

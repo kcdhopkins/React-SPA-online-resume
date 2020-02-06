@@ -27,9 +27,9 @@ body {
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: red;
-  opacity: 0.5;
+  background-color: #e15d44;
   transition: transform .3s cubic-bezier(0, .52, 0, 1);
+  color: white;
 }
 
 .navMenuHide{
@@ -39,4 +39,9 @@ body {
 .navMenuShow{
   transform: translate3d(0vw, 0, 0);
   overflow: hidden;
+}
+
+
+#closeButton:hover {
+  color: black;
 }
