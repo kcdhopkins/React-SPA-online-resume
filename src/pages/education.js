@@ -19,7 +19,7 @@ const education = () => {
         </div>
 
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
+          <ol className="breadcrumb shadow">
             <li className="breadcrumb-item">
               <a href="#homepage">Home</a>
             </li>
@@ -29,7 +29,7 @@ const education = () => {
           </ol>
         </nav>
 
-        <div className="card mb-1">
+        <div className="card mb-3 mt-3 shadow">
           <div className="card-body">
             <h5 className="card-title">Tougaloo College</h5>
             <h6 className="card-subtitle mb-2 text-muted">
@@ -41,7 +41,7 @@ const education = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">Sophia University</h5>
             <h6 className="card-subtitle mb-2 text-muted">
@@ -53,7 +53,7 @@ const education = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card shadow">
           <div className="card-body">
             <h5 className="card-title">Continental Academy</h5>
             <h6 className="card-subtitle mb-2 text-muted">

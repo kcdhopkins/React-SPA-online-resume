@@ -20,7 +20,7 @@ const clubandorganization = () => {
         </div>
 
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
+          <ol className="breadcrumb shadow">
             <li className="breadcrumb-item">
               <a href="#homepage">Home</a>
             </li>
@@ -30,7 +30,7 @@ const clubandorganization = () => {
           </ol>
         </nav>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">Phi Beta Sigma Fraternity Inc.</h5>
             <p className="card-text">
@@ -48,7 +48,7 @@ const clubandorganization = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">Student Support Services</h5>
             <p className="card-text">
@@ -61,7 +61,7 @@ const clubandorganization = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">National Pan-Hellenic Council</h5>
             <p className="card-text">
@@ -80,7 +80,7 @@ const clubandorganization = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">
               The Mathematics and Computer Science Club
@@ -95,7 +95,7 @@ const clubandorganization = () => {
           </div>
         </div>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">The Foreign Language Club</h5>
             <p className="card-text">

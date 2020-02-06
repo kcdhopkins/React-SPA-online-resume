@@ -11,17 +11,15 @@ const workhistory = () => {
 
   return (
     <div style={homeStyle}>
-      <div className="container LibreBaskerville">
+      <div className="container">
         <div className="row">
-          <div className="col-sm-12 text-center mt-5 mb-5">
-            <span className="display-4 LibreBaskerville">
-              &#8249;Work History&#47;&#8250;
-            </span>
+          <div className="col-sm-12 text-center mb-3">
+            <span className="display-4">&#8249;Work History&#47;&#8250;</span>
           </div>
         </div>
 
         <nav aria-label="breadcrumb">
-          <ol className="breadcrumb">
+          <ol className="breadcrumb shadow">
             <li className="breadcrumb-item">
               <a href="#homepage">Home</a>
             </li>
@@ -31,7 +29,7 @@ const workhistory = () => {
           </ol>
         </nav>
 
-        <div className="card mb-1">
+        <div className="card mb-3 shadow">
           <div className="card-body">
             <h5 className="card-title">Wingseed, LLC</h5>
             <h6 className="card-subtitle mb-2 text-muted">
@@ -47,10 +45,10 @@ const workhistory = () => {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card shadow">
           <div className="card-body">
             <h5 className="card-title">NSSC(NASA Shared Services Center)</h5>
-            <h6 className="card-subtitle mb-2 text-muted">
+            <h6 className="card-subtitle text-muted">
               Software Developer I / Feburary 2013 - Feburary 2017
             </h6>
             <p className="card-text">
