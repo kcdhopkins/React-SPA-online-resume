@@ -10,7 +10,6 @@ const Menu = props => {
   };
 
   const iconStyle = {
-    fontFamily: "'Molle', cursive",
     fontSize: "4vh",
     position: "absolute",
     right: "30",
@@ -23,7 +22,9 @@ const Menu = props => {
   }
   
   const linkStyle = { 
-    textDecoration: "none"
+    textDecoration: "none",
+    fontFamily: "'Merriweather', serif",
+    transition: "all .2s cubic-bezier(0, 1.26, .8, 1.28)"
   };
 
   const show = "navMenuShow";
@@ -32,11 +33,13 @@ const Menu = props => {
   const hover = e => {
     e.target.style.color = "black";
     e.target.style.textShadow = "1px 1px 5px grey";
+    //e.target.style.transform = "scale(1.2, 1.2)";
   };
 
   const unHover = e => {
     e.target.style.color = "white";
     e.target.style.textShadow = "none";
+    //e.target.style.transform = "scale(0, 0)";
   };
 
   return (

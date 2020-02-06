@@ -5,7 +5,8 @@ const Jumbo = () => {
   const jumboStyle = {
     marginBottom: 0,
     backgroundImage: `url(${backgroundImage})`,
-    color: "white"
+    color: "white",
+    fontFamily: "'Merriweather', serif"
   };
   const buttonStyle = {
     margin: "5px"

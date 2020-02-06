@@ -9,7 +9,8 @@ const home = () => {
     alignItems: "center",
     flex: "1",
     marginLeft: "10vw",
-    marginRight: "10vw"
+    marginRight: "10vw",
+    fontFamily: "'Merriweather', serif"
   };
 
   const imgStyle = {
