@@ -19,6 +19,7 @@ const home = () => {
 
   return (
     <div style={homeStyle}>
+      
       <img
         className="shadow"
         style={imgStyle}
