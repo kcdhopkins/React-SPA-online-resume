@@ -17,6 +17,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: static;
+  z-index: 0;
 }
 /*Nav menu styles*/
 #navMenuStyle {
@@ -42,6 +44,13 @@ body {
   overflow: hidden;
 }
 
+#closeButton {
+  font-size: 4vh;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+}
+
 #closeButton:hover {
   color: black;
 }
@@ -52,8 +61,4 @@ body {
 
 li {
   margin: 2px;
-}
-
-.closeButton:hover {
-  color: black;
 }

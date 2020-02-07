@@ -14,7 +14,7 @@ const clubandorganization = () => {
         <div className="row">
           <div className="col-sm-12 text-center mb-3">
             <span className="display-4">
-              &#8249;Clubs and Organizations&#47;&#8250;
+              &#8249;Organizations&#47;&#8250;
             </span>
           </div>
         </div>

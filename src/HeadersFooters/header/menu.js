@@ -9,13 +9,6 @@ const Menu = props => {
     fontSize: "3.5vw"
   };
 
-  const iconStyle = {
-    fontSize: "4vh",
-    position: "absolute",
-    right: "30",
-    top: "25"
-  };
-
   const textStyle = {
     color: "white",
     textDecoration: "none"
@@ -43,7 +36,7 @@ const Menu = props => {
   return (
     <div id="navMenuStyle" className={props.visiblilty ? show : hide}>
       <div onClick={props.closeButton}>
-        <FontAwesomeIcon id="closeButton" style={iconStyle} icon={faTimes} />
+        <FontAwesomeIcon id="closeButton" icon={faTimes} />
       </div>
       <ul style={menuStyle}>
         <Link to="/" style={linkStyle} onMouseOver={hover} onMouseOut={unHover}>

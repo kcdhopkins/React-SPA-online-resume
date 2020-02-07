@@ -10,10 +10,14 @@ import clubandorganization from "./pages/clubandorganization";
 import workhistory from "./pages/workhistory";
 
 const App = () => {
+
+  const mainDivStyle = {
+    flex: "1"
+  }
   return (
     <>
       <Header />
-      <div>
+      <div style ={mainDivStyle}>
         <Switch>
           <Route exact path="/" component={homepage} />
           <Route path="/education" component={educationpage} />
