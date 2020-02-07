@@ -22,9 +22,8 @@ const Jumbo = () => {
     >
       <h1 className="text-center">Keyairius Hopkins</h1>
       <p className="text-center">
-        Web developer with front and backend experience using html, css,
-        vanilla/modern/bootstrap javascript on the frontend, php and mysql on
-        the backend to provide the optimal user experience.
+        Fullstack web developer with experience using html, css ,javascript, bootstrap, React, and Redux on the frontend, php and mysql on
+        the backend to provide the optimal user experience, and handle any business need.
       </p>
       <div>
         <a
