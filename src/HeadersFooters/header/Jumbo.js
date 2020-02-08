@@ -29,8 +29,9 @@ const Jumbo = () => {
         <a
           style={buttonStyle}
           className="btn btn-outline-light"
-          href="https://github.com/kcdhopkins"
+          href="https://github.com/kcdhopkins/React-SPA-online-resume"
           role="button"
+          dataToggle="tooltip" dataPlacement="bottom" title="Github code for this site"
         >
           <FontAwesomeIcon icon={faGithub} /> Github
         </a>
@@ -39,6 +40,7 @@ const Jumbo = () => {
           className="btn btn-outline-light"
           href="https://www.linkedin.com/in/keyairius-hopkins-4b7b984a"
           role="button"
+          dataToggle="tooltip" dataPlacement="bottom" title="My Linkedin profile"
         >
           <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
         </a>

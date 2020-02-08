@@ -26,6 +26,7 @@ const home = () => {
         height="150"
         width="150"
         alt="photoOfMe"
+        dataToggle="tooltip" dataPlacement="bottom" title="Photo of me"
       />
       <p>
         FullStack/Software/Web Developer with 5 years of experience using
