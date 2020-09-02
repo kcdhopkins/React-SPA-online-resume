@@ -11,6 +11,11 @@ const Jumbo = () => {
     color: "white",
     fontFamily: "'Merriweather', serif"
   };
+
+  const contentWidth = {
+    maxWidth: "1080px"
+  };
+
   const buttonStyle = {
     margin: "5px"
   };
@@ -20,18 +25,19 @@ const Jumbo = () => {
       style={jumboStyle}
       className="jumbotron d-flex flex-column justify-content-center align-items-center jumbotron-bg-image"
     >
+      <div style = {contentWidth}>
       <h1 className="text-center">Keyairius Hopkins</h1>
       <p className="text-center">
         Fullstack web developer with experience using html, css ,javascript, bootstrap, React, and Redux on the frontend, php and mysql on
         the backend to provide the optimal user experience, and handle any business need.
       </p>
-      <div>
+      <div className = "d-flex justify-content-center">
         <a
           style={buttonStyle}
           className="btn btn-outline-light"
           href="https://github.com/kcdhopkins/React-SPA-online-resume"
           role="button"
-          dataToggle="tooltip" dataPlacement="bottom" title="Github code for this site"
+          title="Github code for this site"
         >
           <FontAwesomeIcon icon={faGithub} /> Github
         </a>
@@ -40,10 +46,11 @@ const Jumbo = () => {
           className="btn btn-outline-light"
           href="https://www.linkedin.com/in/keyairius-hopkins-4b7b984a"
           role="button"
-          dataToggle="tooltip" dataPlacement="bottom" title="My Linkedin profile"
+          title="My Linkedin profile"
         >
           <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
         </a>
+        </div>
       </div>
     </div>
   );
