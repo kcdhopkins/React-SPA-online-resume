@@ -10,6 +10,11 @@ const Nav = () => {
     color: "white"
   };
 
+  const contentWidth = {
+    maxWidth: "1080px",
+    width: "100%"
+  }
+
   const [visible, setVisiblilty] = useState(false);
 
   const menuClick = () => {
@@ -31,14 +36,16 @@ const Nav = () => {
   return (
     <>
       <Menu closeButton={menuClick} visiblilty={visible} />
-      <div className="navbar shadow tigerlily d-flex justify-content-between mb-4">
-        <div className="navbar-brand">
-          <span style={navStyle}>Keyairius Hopkins</span>
-        </div>
-        <div className="hovering" onClick={menuClick}>
-          <span onMouseOver={hover} onMouseOut={unHover}>
-            <FontAwesomeIcon id="closeButton" style={navStyle} icon={faBars} />
-          </span>
+      <div className="navbar shadow tigerlily d-flex justify-content-center mb-4">
+        <div style ={contentWidth} className = "d-flex justify-content-between">
+          <div className="navbar-brand">
+            <span style={navStyle}>Keyairius Hopkins</span>
+          </div>
+          <div className="mt-2" onClick={menuClick}>
+            <span onMouseOver={hover} onMouseOut={unHover}>
+              <FontAwesomeIcon style={navStyle} icon={faBars} />
+            </span>
+          </div>
         </div>
       </div>
     </>
