@@ -1,13 +1,14 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {history} from './history';
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import homepage from "./pages/home.js";
-import educationpage from "./pages/education.js";
+import Homepage from "./pages/home.js";
+import Educationpage from "./pages/education.js";
 import Header from "./HeadersFooters/header/headers";
 import Footer from "./HeadersFooters/footer/footers";
-import clubandorganization from "./pages/clubandorganization";
-import workhistory from "./pages/workhistory";
+import Clubandorganization from "./pages/clubandorganization";
+import Workhistory from "./pages/workhistory";
 
 const App = () => {
 
@@ -15,18 +16,18 @@ const App = () => {
     flex: "1"
   }
   return (
-    <>
-      <Header />
+    <BrowserRouter history = {history}>
+      <Header/>
       <div style ={mainDivStyle}>
         <Switch>
-          <Route exact path="/" component={homepage} />
-          <Route path="/education" component={educationpage} />
-          <Route path="/workhistory" component={workhistory} />
-          <Route path="/clubandorganization" component={clubandorganization} />
+          <Route exact path="/" component={Homepage} />
+          <Route path="/education" component={Educationpage} />
+          <Route path="/workhistory" component={Workhistory} />
+          <Route path="/clubandorganization" component={Clubandorganization} />
         </Switch>
       </div>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 };
 
