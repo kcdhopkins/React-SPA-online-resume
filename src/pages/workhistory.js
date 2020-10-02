@@ -1,4 +1,5 @@
 import React from "react";
+import content from "./pageContext/content";
 
 const workhistory = () => {
   const homeStyle = {
@@ -9,76 +10,46 @@ const workhistory = () => {
     fontFamily: "'Merriweather', serif"
   };
 
+  const context = content.page.workHistory;
+
+  const history = context.history.map( (text, index) => {
+    return(
+      <div key = {index} className="card mb-3 shadow">
+          <div className="card-body">
+            <h5 className="card-title">{text.company}</h5>
+            <h6 className="card-subtitle mb-2 text-muted">
+              {text.jobTitle}
+            </h6>
+            <p className="card-text">
+              {text.duties}
+            </p>
+          </div>
+        </div>
+    )
+  });
+
   return (
     <div style={homeStyle}>
       <div className="container">
         <div className="row">
           <div className="col-sm-12 text-center mb-3">
-            <span className="display-4">&#8249;Work History&#47;&#8250;</span>
+            <span className="display-4">{context.title}</span>
           </div>
         </div>
 
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb shadow">
             <li className="breadcrumb-item">
-              <a href="#homepage">Home</a>
+              <a href="#homepage">{content.page.homeTitle}</a>
             </li>
             <li className="breadcrumb-item active" aria-current="page">
-              Work History
+              {context.title}
             </li>
           </ol>
         </nav>
 
-        <div className="card mb-3 shadow">
-          <div className="card-body">
-            <h5 className="card-title">Wingseed, LLC</h5>
-            <h6 className="card-subtitle mb-2 text-muted">
-              Fullstack Developer / November 2018 - Present
-            </h6>
-            <p className="card-text">
-              Responsible for Front-End and Back-End development. Works heavily
-              in PHP, JavaScript, Handlebars and Backbone using an MVC style
-              architecture, in an agile development lifecycle environment. Uses
-              Handlebars and backbone templating engines to pre-compile
-              templates for faster loading times.
-            </p>
-          </div>
-        </div>
+        {history}
 
-        <div className="card shadow">
-          <div className="card-body">
-            <h5 className="card-title">NSSC(NASA Shared Services Center)</h5>
-            <h6 className="card-subtitle text-muted">
-              Software Developer I / Feburary 2013 - Feburary 2017
-            </h6>
-            <p className="card-text">
-              Worked heavily with Java on the back end to decode incoming data
-              and to store that data for later use in a MySQL database. Used
-              toad for MySQL to connect to local databases to monitor data
-              changes, create tables, and to run any query needed to assist in
-              development and debugging. All Java Development was done in the
-              Integrated Development Environment Eclipse, using an apache local
-              webserver. These tools were used to meet a specific set of
-              requirements set forth by the customer. After local development
-              and successful completion of developer testing, IT testing and
-              functional user testing, all work would be presented to the IT
-              Security team for their review. Once complete, the completed work
-              would be presented before the board to receive a “Push to
-              Production” approval. If approved, all code would be staged to the
-              Liferay portal in the production environment. Used styling
-              languages, such as CSS to enhance the overall look, and feel of
-              webpages, used minor functionality such as “hover &quot;to provide
-              a user-friendly experience. Worked heavily in JavaScript to
-              manipulate data on the client side to prevent page refreshes, as
-              well as make changes to the DOM when data changes through event
-              listeners and callbacks. Worked extensively in ServiceNow to
-              recreate older applications that were initially created using
-              other languages, such as Java, .NET and ColdFusion; as well as set
-              up silo’s, tables and advanced custom forms that required
-              modifications to the “out of the box” features of ServiceNow.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );
